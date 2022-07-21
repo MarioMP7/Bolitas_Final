@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://MenuPausa/main_menub.gd" type="Script" id=1]
+
+[node name="main_menu" type="Button"]
+pause_mode = 2
+margin_right = 142.0
+margin_bottom = 31.0
+size_flags_vertical = 3
+text = "Menu Principal"
+script = ExtResource( 1 )
+
+[connection signal="button_up" from="." to="." method="_on_button_up"]
