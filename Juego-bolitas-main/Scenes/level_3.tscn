@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://platform_metroidvania asset pack v1.01/tiles and background_foreground (new)/tileset_64x64(new).png" type="Texture" id=1]
 [ext_resource path="res://oak_woods_v1.0/background/background_layer_1.png" type="Texture" id=2]
@@ -15,6 +15,9 @@
 [ext_resource path="res://PixelTreeSet/Trees_Alt.png" type="Texture" id=13]
 [ext_resource path="res://assets/tiles_packed.png" type="Texture" id=14]
 [ext_resource path="res://Menu_pausa.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Virtual_Guy/Virtual_Guy_Red/Jump (32x32).png" type="Texture" id=16]
+[ext_resource path="res://Sprite-0002.png" type="Texture" id=17]
+[ext_resource path="res://Sunny-land-assets-files/PNG/environment/props/sign.png" type="Texture" id=18]
 
 [sub_resource type="TileSet" id=9]
 0/name = "tiles_packed.png 0"
@@ -496,3 +499,30 @@ region_rect = Rect2( 190, 20, 80, 110 )
 [node name="Ganaste_lvl3" parent="." instance=ExtResource( 10 )]
 position = Vector2( 3716, 387 )
 scale = Vector2( 0.75, 0.75 )
+
+[node name="Sign" type="Sprite" parent="."]
+show_behind_parent = true
+position = Vector2( 3584, 540 )
+scale = Vector2( 4.77778, 3.85 )
+texture = ExtResource( 18 )
+
+[node name="Sprite" type="Sprite" parent="Sign"]
+position = Vector2( -3.97681, -5.19481 )
+scale = Vector2( 0.238731, 0.263799 )
+texture = ExtResource( 16 )
+vframes = 2
+
+[node name="Sprite2" type="Sprite" parent="Sign"]
+position = Vector2( 4.18604, -5.19481 )
+scale = Vector2( 0.238731, 0.263799 )
+texture = ExtResource( 16 )
+flip_h = true
+vframes = 2
+frame = 1
+
+[node name="Sprite-0002" type="Sprite" parent="Sign"]
+visible = false
+modulate = Color( 0.701961, 0.411765, 0.313726, 1 )
+position = Vector2( -0.209351, -4.67533 )
+scale = Vector2( 0.458031, 0.493405 )
+texture = ExtResource( 17 )
