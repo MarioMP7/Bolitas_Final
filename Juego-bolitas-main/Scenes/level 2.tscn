@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://platform_metroidvania asset pack v1.01/tiles and background_foreground (new)/tileset_64x64(new).png" type="Texture" id=1]
 [ext_resource path="res://character.tscn" type="PackedScene" id=2]
@@ -14,6 +14,10 @@
 [ext_resource path="res://Sunny-land-assets-files/PNG/environment/props/bush.png" type="Texture" id=12]
 [ext_resource path="res://Menu_pausa.tscn" type="PackedScene" id=13]
 [ext_resource path="res://assets/hf-free-complete/equipment-pro-v1.1/EquipmentPro.otf" type="DynamicFontData" id=14]
+[ext_resource path="res://Virtual_Guy/Virtual_Guy_Red/Jump (32x32).png" type="Texture" id=15]
+[ext_resource path="res://Sprite-0002.png" type="Texture" id=16]
+[ext_resource path="res://Sunny-land-assets-files/PNG/environment/props/sign.png" type="Texture" id=17]
+[ext_resource path="res://TX Village Props.png" type="Texture" id=18]
 
 [sub_resource type="ConvexPolygonShape2D" id=5]
 points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
@@ -408,7 +412,9 @@ scale = Vector2( 4.49593, 4.18294 )
 texture = ExtResource( 12 )
 
 [node name="ganaste_lvl2" parent="." instance=ExtResource( 9 )]
-position = Vector2( 1434, -166 )
+position = Vector2( 1437, -150 )
+collision_layer = 4
+collision_mask = 4
 
 [node name="Tree" type="Sprite" parent="."]
 modulate = Color( 0.839216, 0.87451, 0.831373, 1 )
@@ -428,6 +434,7 @@ margin_left = -1157.0
 margin_top = 348.0
 margin_right = -855.0
 margin_bottom = 485.0
+rect_pivot_offset = Vector2( 2215, -88 )
 theme = SubResource( 8 )
 custom_fonts/font = SubResource( 9 )
 text = "BIENVENIDOS AL TUTORIAL
@@ -435,3 +442,38 @@ PARA MOVERTE
 PULSA  A o D (P1)
 PULSA LEFT o RIGHT (P2) "
 align = 1
+
+[node name="Sprite3" type="Sprite" parent="."]
+position = Vector2( 1509, 32 )
+scale = Vector2( 1.8759, 1.62949 )
+texture = ExtResource( 18 )
+region_enabled = true
+region_rect = Rect2( 385, 21, 30, 46 )
+
+[node name="Sign" type="Sprite" parent="."]
+show_behind_parent = true
+position = Vector2( 1250, 35.75 )
+scale = Vector2( 3.33333, 3.375 )
+texture = ExtResource( 17 )
+
+[node name="Sprite" type="Sprite" parent="Sign"]
+visible = false
+position = Vector2( -3.97681, -5.19481 )
+scale = Vector2( 0.238731, 0.263799 )
+texture = ExtResource( 15 )
+vframes = 2
+
+[node name="Sprite2" type="Sprite" parent="Sign"]
+visible = false
+position = Vector2( 4.18604, -5.19481 )
+scale = Vector2( 0.238731, 0.263799 )
+texture = ExtResource( 15 )
+flip_h = true
+vframes = 2
+frame = 1
+
+[node name="Sprite-0002" type="Sprite" parent="Sign"]
+modulate = Color( 0.701961, 0.411765, 0.313726, 1 )
+position = Vector2( -0.209351, -4.67533 )
+scale = Vector2( 0.458031, 0.493405 )
+texture = ExtResource( 16 )

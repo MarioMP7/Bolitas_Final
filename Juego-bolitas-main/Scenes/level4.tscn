@@ -488,8 +488,8 @@ texture = ExtResource( 15 )
 
 [node name="Sign" type="Sprite" parent="."]
 show_behind_parent = true
-position = Vector2( 2896, 91 )
-scale = Vector2( 4.77778, 3.85 )
+position = Vector2( 2890.5, 91.25 )
+scale = Vector2( 4.16666, 3.825 )
 texture = ExtResource( 17 )
 
 [node name="Sprite" type="Sprite" parent="Sign"]
